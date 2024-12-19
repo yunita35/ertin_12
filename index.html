@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventaris</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <a href="#welcome" class="logo"
+          >SIASMEN<span style="color: rgb(105, 34, 172)">RPL</span></a
+        >
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="page/loginadminn.html">Pendataan Barang</a></li>
+          <li><a href="page/kritiksaran.html">Kritik & Saran</a></li>
+        </ul>
+        <div class="tombol">&#9776;</div>
+      </div>
+    </nav>
+    <section class="welcome-section" id="welcome">
+      <div class="welcome-text">
+        <h1>
+          Inventaris Barang Jurusan <br />
+          Rekayasa Perangkat Lunak!
+        </h1>
+        <p class="pee" style="margin-bottom: 100px; font-size: 1rem;">
+          Inventaris barang jurusan RPL di SMKN 8 Malang adalah catatan semua
+          peralatan jurusan,<br> seperti komputer, laptop, alat elektronik, dan
+          perlengkapan pendukung lainnya.<br>Tujuannya untuk mendata barang secara
+          rapi, memastikan perawatannya,<br> mempermudah pelacakan, serta mengurangi
+          risiko kehilangan atau kerusakan.
+        </p>
+        <a href="#panduan" class="btn-primary">Panduan</a>
+      </div>
+    </section>
+    <section id="panduan">
+      <h2>Cara Menggunakan Sistem Inventaris</h2>
+      <div class="panduan-container">
+        <div class="panduan-item">
+          <div class="panduan-icon">🔍</div>
+          <h3>Cari Barang</h3>
+          <p>Gunakan fitur pencarian untuk menemukan barang yang tersedia.</p>
+        </div>
+        <div class="panduan-item">
+          <div class="panduan-icon">📝</div>
+          <h3>Ajukan Peminjaman</h3>
+          <p>Isi formulir peminjaman untuk barang yang diinginkan.</p>
+        </div>
+        <div class="panduan-item">
+          <div class="panduan-icon">✅</div>
+          <h3>Gunakan Barang</h3>
+          <p>Ambil barang yang telah disetujui dan gunakan sesuai kebutuhan.</p>
+        </div>
+        <div class="panduan-item">
+          <div class="panduan-icon">❓</div>
+          <h3>Jika ada pertanyaan</h3>
+          <p>Hubungi admin jurusan atau cek FAQ untuk informasi lebih lanjut.</p>
+        </div>
+      </div>
+    </section>
+    <section class="produk-section" id="daftar-buku">
+      <h2>Daftar Barang</h2>
+      <br>
+      <input
+        type="text"
+        id="searchBar"
+        placeholder="🔎 Cari Barang..."
+        style="width: 70%;"
+        onkeyup="filterBooks()"
+      />
+      <br>
+      <br>
+      <div class="produk-container">
+        <div class="produk-card">        
+          <img src="asset/lap.png" alt="Produk 1" />
+          <h3>Laptop</h3>
+          <p>Laptop adalah komputer praktis yang mudah dibawa, dilengkapi layar, keyboard, dan baterai untuk penggunaan fleksibel di mana saja.</p>
+          <button type="menu" class="btn-primary">
+            <a href="page/peminjaman.html" class="btn-primary">Pinjam</a>
+          </button>
+        </div>
+
+        <div class="produk-card">
+          <img src="asset/stop2.png" alt="Produk 2" />
+          <h3>Stopkontak</h3>
+          <p>Stopkontak adalah perangkat untuk menghubungkan kabel listrik dengan sumber daya agar alat elektronik bisa digunakan.</p>
+          <button class="btn-primary">
+            <a href="page/peminjaman.html" class="btn-primary">Pinjam</a>
+          </button>
+        </div>
+        <div class="produk-card">
+          <img src="asset/speak.png" alt="Produk 3" />
+          <h3>Speaker</h3>
+          <p>Speaker adalah perangkat yang mengubah sinyal listrik menjadi suara</p>
+          <button class="btn-primary">
+            <a href="page/peminjaman.html" class="btn-primary">Pinjam</a>
+          </button>
+        </div>
+        <div class="produk-card">
+          <img src="asset/pro.png" alt="Produk 3" />
+          <h3>LCD</h3>
+          <p>LCD (Liquid Crystal Display) adalah jenis layar yang menggunakan cairan kristal untuk menampilkan gambar atau teks.</p>
+          <button class="btn-primary">
+            <a href="page/peminjaman.html" class="btn-primary">Pinjam</a>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="pertanyaan-section">
+      <div class="faq-container">
+        <h2>Pertanyaan yang sering diajukan</h2>
+      <div class="faq-item">
+        <div class="faq-question">Berapa lama barang inventaris boleh dipinjam? 👇</div>
+        <div class="faq-answer">Pengembalian barang inventaris max. di kembalikan saat pulang sekolah</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Apa yang harus dilakukan jika terlambat mengembalikan barang lebih dari sehari? 👇</div>
+      <div class="faq-answer">Jika barang tidak dikembalikan lebih dari sehari maka akan mendapatkan konsekuensi yakni peminjam tidak diperbolehkan untuk meminjam barang lagi</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Bagaimana jika barang yang dipinjam rusak atau hilang? 👇</div>
+      <div class="faq-answer">Barang yang di pinjam harus dikembalikan utuh, jika rusak atau hilang maka peminjam wajib mengganti atau memperbaikinya sesuai kebijakan. </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Apakah jurusan lain boleh pijam di Inventaris jurusan RPL? 👇</div>
+      <div class="faq-answer">ngga tau, nanti tak tanyakan pak harto dulu y</div>
+    </div>
+   <div class="faq-item">
+      <div class="faq-question">Siapa yang bisa dihubungi untuk pertanyaan lebih lanjut tentang inventaris? 👇</div>
+      <div class="faq-answer">pak harto</div>
+   </div>
+  </div>
+    </section>
+    <footer class="footer">
+      <div class="Logo">
+          <img
+            src="asset/logo smk.png"
+            alt="Facebook"
+            style="width: 100px; height: 100px"
+          />
+         
+        </a> 
+        <h3>SMKN 8 MALANG</h3><br>
+        <a href="https://www.instagram.com/" target="_blank">
+          <img
+            src="asset/rpl.png"
+            alt="Instagram"
+            style="width: 100px; height: 100px"
+          />
+        </a>
+        <h3>Rekayasa Perangkat Lunak</h3>
+      </div>
+      <div class="deskripsi">
+        <h3>Halaman di Website</h3>
+        <hr class="garis">
+        <ul style="list-style-type: none; padding: 0;">
+          <li><a href="index.html" style="text-decoration: none;    color: #5F6F52;">Home</a></li>
+          <li><a href="pendataan.html" style="text-decoration: none;    color: #5F6F52;">Pendataan Barang</a></li>
+          <li><a href="peminjaman.html" style="text-decoration: none;   color: #5F6F52;">Peminjaman</a></li>
+          <li><a href="kritik-saran.html" style="text-decoration: none;   color: #5F6F52;">Kritik & Saran</a></li>
+
+        </ul>
+      </div>
+      <div class="deskripsi">
+        <h3>Hubungi Kami</h3>
+        <hr class="garis">
+         <h3>Alamat</h3>
+        <p class="alamat">
+          Jl. Teluk Pacitan, Arjosari, Kec. Blimbing,<br> Kota Malang, Jawa Timur 65126
+        </p>
+        <h3>Telepon</h3>
+        <p class="telepon">(0341) 479148</p>
+
+        <h3>Email</h3>
+        <p class="email">smkn8mlgRPL@sch.id</p>
+      </div>
+    </footer>
+    <footer class="akhir">
+      <div class="copy">
+        <p>&copy; 2024SIASMENRPL.@astaarkananta.</p>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      //deklarasi tombol, menu
+      const tombol = document.querySelector(".tombol");
+      const menu = document.querySelector(".menu");
+
+      if (tombol && menu) {
+        tombol.addEventListener("click", () => {
+          menu.classList.toggle("aktif");
+          console.log(
+            "Tombol diklik, menu aktif:",
+            menu.classList.contains("aktif")
+          );
+        });
+      } else {
+        console.error("Tombol atau menu tidak ditemukan!");
+      }
+    </script>
+    <script>
+      function filterBooks() {
+        const searchInput = document
+          .getElementById("searchBar")
+          .value.toLowerCase();
+        const bookCards = document.querySelectorAll(".produk-card");
+
+        bookCards.forEach((card) => {
+          const bookTitle = card.querySelector("h3").innerText.toLowerCase();
+          if (bookTitle.includes(searchInput)) {
+            card.style.display = "block"; // Tampilkan kartu yang sesuai
+          } else {
+            card.style.display = "none"; // Sembunyikan kartu yang tidak sesuai
+          }
+        });
+      }
+    </script>
+    <script>
+      const questions = document.querySelectorAll('.faq-question');
+      questions.forEach(q => {
+          q.addEventListener('click', () => {
+              const answer = q.nextElementSibling;
+              answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+          });
+      });
+  </script>
+  </body>
+</html>

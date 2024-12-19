@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminjaman</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+          <a href="#welcome" class="logo"
+            >SIASMEN<span style="color: rgb(105, 34, 172)">RPL</span></a
+          >
+          <ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+          <li><a href="../page/loginadminn.html">Pendataan Barang</a></li>
+          <li><a href="../page/kritiksaran.html">Kritik & Saran</a></li>
+          </ul>
+          <div class="tombol">&#9776;</div>
+        </div>
+      </nav>
+      <section class="peminjaman-section" id="peminjaman">
+        <h1>Formulir Peminjaman</h1>
+        <div class="peminjaman-container">
+        <form id="peminjamanForm" class="peminjaman-form">
+          <div class="form-group">
+            <label for="name">Nama Peminjam:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap" required />
+          </div>
+          <div class="form-group">
+            <label for="nisn">NISN:</label>
+            <input type="number" id="NISN" name="NISN" placeholder="Masukkan NISN" required />
+          </div>
+          <div class="form-group">
+            <label for="kls">Kelas:</label>
+            <input type="text" id="KLS" name="KLS" placeholder="Masukkan Kelas dan Jurusan" required />
+          </div>
+          <div class="form-group">
+            <label for="barang">Barang yang dipinjam:</label>
+            <select name="Barang" id="Barang">
+              <option value="Laptop">Laptop</option>
+              <option value="Stopkontak">Stop kontak</option>
+              <option value="LCD">LCD</option>
+              <option value="Speaker">Speaker</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Petugas">Petugas:</label><br />
+            <input type="radio" id="pak-harto" name="Petugas" value="Pak Harto" required />
+            <label for="pak-harto">Pak Harto</label><br />
+            <input type="radio" id="guru-jurusan" name="Petugas" value="Guru Jurusan" required />
+            <label for="guru-jurusan">Guru Jurusan</label>
+          </div>
+          <div class="form-group">
+            <label for="tgl-pinjam">Tanggal Peminjaman:</label>
+            <input type="date" id="tgl-pinjam" name="tgl-pinjam"required />
+          </div>
+          <div class="form-group">
+            <label for="tgl-kembali">Jam Peminjaman:</label>
+            <input type="time" id="tgl-kembali" name="tgl-kembali" required />
+          </div>
+          <button type="submit" class="btn-primary">Kirim</button>
+        </form>
+      </div>
+      </section>
+      <script>
+        // Simpan data ke localStorage dan redirect ke halaman lain
+        document.getElementById("peminjamanForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Mencegah reload halaman
+            
+            // Ambil nilai input
+            const name = document.getElementById("name").value;
+            const NISN = document.getElementById("NISN").value;
+            const KLS = document.getElementById("KLS").value;
+            const Barang = document.getElementById("Barang").value;
+            const petugas = document.querySelector('input[name="Petugas"]:checked').value;
+            const pinjam = document.getElementById("tgl-pinjam").value;
+            const kembali = document.getElementById("tgl-kembali").value;
+            
+            // Simpan ke localStorage
+            localStorage.setItem("name", name);
+            localStorage.setItem("NISN", NISN);
+            localStorage.setItem("KLS", KLS);
+            localStorage.setItem("Barang", Barang);
+            localStorage.setItem("Petugas", petugas);
+            localStorage.setItem("tglPinjam", pinjam);
+            localStorage.setItem("tglKembali", kembali);
+            
+            // Redirect ke halaman struk
+            window.location.href = "struk.html";
+        });
+    </script>
+      
+</body>
+</html>
